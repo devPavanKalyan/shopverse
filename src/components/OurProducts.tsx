@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axiosInstance from "../utils/axiosInstance";
 import ScrollableTabs from "./ScrollableTabs";
 
 // const products = [
@@ -22,24 +23,24 @@ type Product = {
 const OurProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  //   useEffect(() => {
-  //     let isMounted = true;
+  useEffect(() => {
+    let isMounted = true;
 
-  //     axiosInstance
-  //       .get("")
-  //       .then((res) => {
-  //         if (isMounted) {
-  //           setProducts(res.data);
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
+    axiosInstance
+      .get("")
+      .then((res) => {
+        if (isMounted) {
+          setProducts(res.data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
-  //     return () => {
-  //       isMounted = false; // cleanup to avoid memory leak or update on unmounted component
-  //     };
-  //   }, []);
+    return () => {
+      isMounted = false; // cleanup to avoid memory leak or update on unmounted component
+    };
+  }, []);
 
   return (
     <div
