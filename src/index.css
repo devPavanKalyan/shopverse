@@ -1,14 +1,26 @@
 @import "tailwindcss";
-
+/* 
 :root {
   --btn-bg: #1d267d;
   --btn-hover: #0c134f;
   --border-color: #2f58cd;
 }
 
-/* * {
+* {
   font-family: "Poppins", sans-serif;
-} */
+}
+
+
+
+html,
+body {
+  min-width: 640px;
+  overflow-x: auto;
+}
+
+
+
+Header bg #210F37 */
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
@@ -20,16 +32,3 @@
     scrollbar-width: none;
   }
 }
-
-/* ✅ Prevent shrinking below 640px */
-html,
-body {
-  min-width: 640px;
-  overflow-x: auto;
-}
-
-/* 
-
-Header bg #210F37
-
-*/

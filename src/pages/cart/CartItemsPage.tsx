@@ -2,7 +2,7 @@ import React from "react";
 
 const CartItemsPage: React.FC = () => {
   return (
-    <div className="flex flex-1 justify-center items-center p-10 px-20 bg-blue-200">
+    <div className="flex justify-center items-center min-h-screen text-7xl font-bold">
       <h1>This is Cart Items Page</h1>
     </div>
   );

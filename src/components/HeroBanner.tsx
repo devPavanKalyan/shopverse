@@ -1,43 +1,18 @@
+import React from "react";
 import ScrollableCardWrapper from "./ScrollableCardHero";
 
-const HeroBanner = () => {
+const HeroBanner: React.FC = () => {
   return (
-    <div className="py-10">
-      <ScrollableCardWrapper>
-        {[
-          "red",
-          "orange",
-          "yellow",
-          "green",
-          "blue",
-          "purple",
-          "pink",
-          "indigo"
-        ].map((color, index) => {
-          const bgColorClass = {
-            red: "bg-red-500", // Bright Red
-            orange: "bg-orange-500", // Bright Orange
-            yellow: "bg-yellow-500", // Bright Yellow
-            green: "bg-green-500", // Bright Green
-            blue: "bg-blue-500", // Bright Blue
-            purple: "bg-purple-500", // Bright Purple
-            pink: "bg-pink-500", // Bright Pink
-            indigo: "bg-indigo-500" // Bright Indigo
-          }[color];
-
-          return (
-            <div
-              key={index}
-              className={`flex-shrink-0 ${bgColorClass} rounded-2xl p-6 flex items-center justify-center text-white text-lg font-bold shadow-lg hover:scale-105 transition-all`}
-              style={{
-                width: "100%", // Full width of container
-                height: "100%" // Full height of parent
-              }}
-            >
-              Card {index + 1}
-            </div>
-          );
-        })}
+    <div className="flex flex-row items-center py-5">
+      <ScrollableCardWrapper height={"100"}>
+        {Array.from({ length: 10 }).map((_, index) => (
+          <div
+            key={index}
+            className="w-full h-full border-2 border-orange-700 bg-orange-900 text-white text-7xl flex items-center justify-center"
+          >
+            Card {index + 1}
+          </div>
+        ))}
       </ScrollableCardWrapper>
     </div>
   );

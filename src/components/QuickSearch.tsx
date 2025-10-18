@@ -32,7 +32,7 @@ const QuickSearch = () => {
       className="bg-white font-sans"
       style={{ fontFamily: `'Poppins', sans-serif` }}
     >
-      <div className="flex gap-3 overflow-x-auto py-1 mt-2 px-10 scroll-smooth whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <div className="flex gap-3 overflow-x-auto py-1 mt-2 px-2 md:px-10 scroll-smooth whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {categories.map((cat) => {
           const isSelected =
             cat === "All" ? filters.length === 0 : filters.includes(cat);

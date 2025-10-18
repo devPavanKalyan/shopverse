@@ -1,11 +1,7 @@
 import Header from "../components/Header";
 
 const HeaderLayout = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <Header />;
 };
 
 export default HeaderLayout;

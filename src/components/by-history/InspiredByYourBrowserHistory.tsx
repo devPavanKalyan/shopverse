@@ -1,21 +1,23 @@
-import ScrollableTabs from "../ScrollableTabs";
-
 const InspiredByYourBrowserHistory = () => {
   return (
     <section
       className="p-8 bg-white mb-12 font-sans"
       style={{ fontFamily: `'Poppins', sans-serif` }}
     >
-      <h2 className="text-2xl md:text-xl font-extrabold text-gray-800 mb-6 tracking-tight">
+      <h2 className="text-2xl md:text-xl text-center font-extrabold text-gray-800 mb-6 tracking-tight">
         Inspired by Your Browsing History
       </h2>
 
-      <ScrollableTabs>
+      <div className="flex overflow-x-auto space-x-6 pb-4 md:px-4 no-scrollbar scroll-smooth py-5">
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className="min-w-[220px] h-[300px] bg-gray-50 rounded-none p-5 shadow-sm hover:shadow-md transition-transform duration-300 hover:scale-[1.03] flex flex-col justify-center"
+            className="min-w-[220px] h-[300px] border border-gray-100 rounded-none p-5 shadow-sm hover:shadow-md transform hover:scale-105 transition-transform duration-300 will-change-transform flex flex-col justify-center"
           >
+            {/* <div
+              key={product.id}
+              className="min-w-[250px] max-w-[250px] h-auto bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 will-change-transform mr-5"
+            > */}
             <div className="space-y-3 text-center">
               <div className="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-2" />
               <p className="text-lg font-semibold text-gray-900">
@@ -30,7 +32,7 @@ const InspiredByYourBrowserHistory = () => {
             </div>
           </div>
         ))}
-      </ScrollableTabs>
+      </div>
     </section>
   );
 };

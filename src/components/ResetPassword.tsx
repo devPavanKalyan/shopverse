@@ -43,10 +43,10 @@ const ResetPassword = () => {
 
   return (
     <div
-      className="min-h-[100vh] flex flex-col items-center justify-center bg-gray-50 px-4  font-sans"
+      className="flex flex-col items-center font-sans py-20 px-2"
       style={{ fontFamily: `'Poppins', sans-serif` }}
     >
-      <div className="bg-white w-full max-w-md p-8 rounded-3xl border border-gray-100 shadow-md mt-20 mb-[199px] text-left">
+      <div className="bg-white w-full max-w-md p-8 md:border md:border-2 md:border-orange-200 rounded-3xl text-center">
         <h2 className="text-3xl font-extrabold text-gray-800 mb-2 leading-tight tracking-tight">
           Reset Password
         </h2>
